@@ -3,13 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>لعبة الاميرة سلسبيل</title>
-<style>body{margin:0;font-family:tahoma;background:linear-gradient(180deg,#FFD6E7,#E1C4FF,#FFEBEE);min-height:100vh;text-align:center;padding:8px}.header{background:rgba(255,255,255,0.9);border-radius:22px;padding:14px;color:#AD1457;font-weight:bold}.name{font-size:14px;color:#6A1B9A;background:#FCE4EC;padding:4px 12px;border-radius:12px;display:inline-block;margin-top:6px}.badges span{background:#fff;padding:6px 12px;border-radius:14px;margin:3px;display:inline-block}.castle{font-size:55px;margin:8px}.qbox{background:#FFF8E1;border:4px solid #F48FB1;border-radius:26px;padding:18px;margin:12px auto;max-width:430px;min-height:340px}.q{font-size:20px;color:#880E4F;font-weight:bold;margin-bottom:14px}.opt{width:100%;padding:14px;margin:7px 0;border:none;border-radius:18px;background:white;font-size:18px}.right{background:#C8E6C9!important;border:2px solid #2E7D32!important}.wrong{background:#FFCDD2!important;border:2px solid #C62828!important}.btn{background:linear-gradient(90deg,#FF80AB,#F50057);color:white;border:none;padding:14px;border-radius:22px;font-size:18px;width:100%;margin-top:10px}.progress{height:14px;background:#fff;border-radius:12px;margin:10px auto;max-width:430px;overflow:hidden}#fill{height:14px;background:linear-gradient(90deg,#FF4081,#F50057);width:0%;border-radius:12px;transition:.5s}</style>
+<title>👑 لعبة الأميرة الذكية - أ/ سلسبيل - الثالث ب</title>
+<style>
+body{margin:0;font-family:tahoma;background:linear-gradient(180deg,#FFD6E7,#E1C4FF,#FFEBEE);min-height:100vh;text-align:center;padding:8px}
+.header{background:rgba(255,255,255,0.9);border-radius:22px;padding:14px;color:#AD1457;font-weight:bold;box-shadow:0 4px 12px #f8a}
+.name{font-size:14px;color:#6A1B9A;background:#FCE4EC;padding:4px 12px;border-radius:12px;display:inline-block;margin-top:6px}
+.badges span{background:#fff;padding:6px 12px;border-radius:14px;margin:3px;display:inline-block;box-shadow:0 2px 4px #ddd;font-size:15px}
+.castle{font-size:55px;margin:8px}
+.qbox{background:#FFF8E1;border:4px solid #F48FB1;border-radius:26px;padding:18px;margin:12px auto;max-width:430px;box-shadow:0 6px 18px #e9a;min-height:340px}
+.q{font-size:20px;color:#880E4F;font-weight:bold;margin-bottom:14px;line-height:1.5}
+.opt{width:100%;padding:14px;margin:7px 0;border:none;border-radius:18px;background:white;font-size:18px;box-shadow:0 3px 6px #ccc;cursor:pointer}
+.opt:hover{background:#FCE4EC;transform:scale(1.02)}
+.right{background:#C8E6C9!important;border:2px solid #2E7D32!important} 
+.wrong{background:#FFCDD2!important;border:2px solid #C62828!important}
+.btn{background:linear-gradient(90deg,#FF80AB,#F50057);color:white;border:none;padding:14px;border-radius:22px;font-size:18px;width:100%;margin-top:10px;cursor:pointer}
+.progress{height:14px;background:#fff;border-radius:12px;margin:10px auto;max-width:430px;overflow:hidden} #fill{height:14px;background:linear-gradient(90deg,#FF4081,#F50057);width:0%;border-radius:12px;transition:.5s}
+.footer{font-size:12px;color:#AD1457;margin-top:15px;opacity:0.7}
+</style>
 </head>
 <body>
-<div class="header">👑 لعبة النحو للأميرة الصغيرة<br><div class="name">💖 إعداد: أ/ سلسبيل - طالبات الصف الثالث ب 💖</div><div class="badges"><span>💎 <b id="j">0</b> جوهرة</span> <span>👑 <b id="crown">0</b> تاج</span> <span>❤️ 3</span></div></div><div class="castle">🏰✨👸✨</div><div class="progress"><div id="fill"></div></div><div class="qbox"><div id="game"><h3 style="color:#C2185B">هيا يا أميرات الثالث ب! 🗝️<br>ساعدوا الأميرة تفتح القصر الوردي!</h3><button class="btn" onclick="start()">🌟 ابدئي مغامرة الأميرة الكاملة</button></div></div>
+<div class="header">👑 لعبة النحو للأميرة الصغيرة<br>
+<div class="name">💖 إعداد: أ/ سلسبيل - طالبات الصف الثالث ب 💖</div>
+<div class="badges"><span>💎 <b id="j">0</b> جوهرة</span> <span>👑 <b id="crown">0</b> تاج</span> <span>❤️ 3</span></div>
+</div>
+<div class="castle">🏰✨👸✨</div>
+<div class="progress"><div id="fill"></div></div>
+<div class="qbox"><div id="game"><h3 style="color:#C2185B">هيا يا أميرات الثالث ب! 🗝️<br>ساعدوا الأميرة تفتح القصر الوردي!</h3>
+<button class="btn" onclick="start()">🌟 ابدئي مغامرة الأميرة الكاملة</button>
+<p style="font-size:13px;color:#888;margin-top:12px">تاء مربوطة ة - هاء ه - تاء مفتوحة ت - واو الجماعة وا - الهمزات - حروف الجر<br>إعداد أ/ سلسبيل</p>
+</div></div>
+<div class="footer">للطالبات المتفوقات في الثالث ب 🌸 - مع حبي أ/ سلسبيل</div>
 <script>
-const all=[{q:"أي كلمة تنتهي بـ ة؟ مدرسة 👑",o:["مدرسة 🏫","بيت","قلم ✏️"],c:0,t:"التاء المربوطة ة للكلمات المؤنثة"},{q:"وردة جميلة فيها؟ 🌹",o:["تاء مربوطة ة","هاء ه","تاء مفتوحة ت"],c:0,t:"وردة = تاء مربوطة ة"},{q:"كلمة بهاء ه: مياه 💧",o:["مياه","مياة","مياةـ"],c:0,t:"الهاء بدون نقطتين ه"},{q:"كتابه (الكتاب له) 📚",o:["كتابه","كتابة","كتابو"],c:0,t:"هاء الضمير: كتابه"},{q:"بنت 👧 فيها؟",o:["تاء مفتوحة ت","تاء مربوطة ة","هاء ه"],c:0,t:"بنت = تاء مفتوحة ت"},{q:"زيت 🫒 آخره؟",o:["تاء مفتوحة","تاء مربوطة","هاء"],c:0,t:"زيت = تاء مفتوحة"},{q:"كتبوا ✍️ فيها؟",o:["واو جماعة + ألف وا 👑","هاء","تاء"],c:0,t:"واو الجماعة وا: كتبوا، ذهبوا"},{q:"هم ... الدرس",o:["كتبوا","كتب","كتبت"],c:0,t:"هم كتبوا"},{q:"أخذ 🥄 همزتها؟",o:["همزة قطع أ","همزة وصل","مافي همزة"],c:0,t:"أخذ همزة قطع أ"},{q:"المدرسة 🏫 همزتها؟",o:["همزة وصل (الـ)","همزة قطع","متطرفة"],c:0,t:"ال التعريف همزتها وصل"},{q:"سماء ☁️ همزتها؟",o:["متطرفة في الآخر","متوسطة","وصل"],c:0,t:"سماء همزة متطرفة"},{q:"سؤال ❓ همزتها؟",o:["متوسطة على واو","متطرفة","وصل"],c:0,t:"سؤال همزتها وسط الكلمة"},{q:"حرف جر هو؟",o:["في 🌳","كتب","جميلة"],c:0,t:"في من حروف الجر"},{q:"الأميرة في القصر 👑 في؟",o:["حرف جر","فعل","اسم"],c:0,t:"في حرف جر"},{q:"حروف الجر هي:",o:["من إلى عن على في ب ك ل 💖","أ ب ت","هو هي"],c:0,t:"احفظيها: من، إلى، عن، على، في، ب، ك، ل"}];let i=0,j=0,crown=0;function start(){i=0;show();}function show(){if(i>=all.length){document.getElementById("game").innerHTML=`<h2>برافو يا أميرات الثالث ب! 👑🎉🏰</h2><p>جمعتن ${j} جوهرة و ${crown} تاج</p><p>🏰 فتحتن قصر الأميرة الوردي!</p><p style="color:#C2185B;font-weight:bold">ممتازات يا حلوات - أ/ سلسبيل فخورة بكن 💖</p><button class="btn" onclick="location.reload()">🔁 العبي مرة ثانية</button>`;document.getElementById("fill").style.width="100%";return;}let q=all[i];document.getElementById("game").innerHTML=`<div class="q">${i+1}/${all.length} - ${q.q}</div>`+q.o.map((o,k)=>`<button class="opt" onclick="check(this,${k})">${o}</button>`).join('')+`<div id="hint" style="margin-top:12px;color:#AD1457;font-size:15px;min-height:24px"></div>`;document.getElementById("fill").style.width=(i/all.length*100)+"%";}function check(el,k){let q=all[i];if(k===q.c){el.classList.add("right");j++;crown++;document.getElementById("j").innerText=j;document.getElementById("crown").innerText=crown;document.getElementById("hint").innerHTML="✅ أحسنتِ يا أميرة! "+q.t+" 💎+1 👑+1";setTimeout(()=>{i++;show()},1500);}else{el.classList.add("wrong");document.getElementById("hint").innerHTML="❌ حاولي يا أميرة الثالث ب: "+q.t;}}
+const all=[
+{q:"أي كلمة تنتهي بـ ة؟ مدرسة 👑",o:["مدرسة 🏫","بيت","قلم ✏️"],c:0,t:"التاء المربوطة ة للكلمات المؤنثة مثل مدرسة ووردة"},
+{q:"وردة جميلة فيها؟ 🌹",o:["تاء مربوطة ة","هاء ه","تاء مفتوحة ت"],c:0,t:"وردة = تاء مربوطة ة"},
+{q:"كلمة بهاء ه: مياه 💧",o:["مياه","مياة","مياةـ"],c:0,t:"الهاء بدون نقطتين ه مثل مياه ووجه"},
+{q:"كتابه (الكتاب له) 📚",o:["كتابه","كتابة","كتابو"],c:0,t:"هاء الضمير: كتاب + ه = كتابه"},
+{q:"بنت 👧 فيها؟",o:["تاء مفتوحة ت","تاء مربوطة ة","هاء ه"],c:0,t:"بنت وبيت وزيت تنتهي بتاء مفتوحة ت"},
+{q:"زيت 🫒 آخره؟",o:["تاء مفتوحة","تاء مربوطة","هاء"],c:0,t:"زيت = تاء مفتوحة"},
+{q:"كتبوا ✍️ فيها؟",o:["واو جماعة + ألف وا 👑","هاء","تاء"],c:0,t:"واو الجماعة يجي بعدها ألف: كتبوا، ذهبوا، فتحوا"},
+{q:"هم ... الدرس",o:["كتبوا","كتب","كتبت"],c:0,t:"هم كتبوا = واو الجماعة للجمع"},
+{q:"أخذ 🥄 همزتها؟",o:["همزة قطع أ","همزة وصل","مافي همزة"],c:0,t:"أخذ همزة قطع تكتب وتنطق أ"},
+{q:"المدرسة 🏫 همزتها؟",o:["همزة وصل (الـ)","همزة قطع","متطرفة"],c:0,t:"ال التعريف همزتها وصل دائما"},
+{q:"سماء ☁️ همزتها؟",o:["متطرفة في الآخر","متوسطة","وصل"],c:0,t:"سماء همزة آخر الكلمة متطرفة على السطر"},
+{q:"سؤال ❓ همزتها؟",o:["متوسطة على واو","متطرفة","وصل"],c:0,t:"سؤال همزتها وسط الكلمة على واو"},
+{q:"حرف جر هو؟",o:["في 🌳","كتب","جميلة"],c:0,t:"في من حروف الجر"},
+{q:"الأميرة في القصر 👑 في؟",o:["حرف جر","فعل","اسم"],c:0,t:"في حرف جر يجر اللي بعده: في القصر"},
+{q:"حروف الجر هي:",o:["من إلى عن على في ب ك ل 💖","أ ب ت","هو هي"],c:0,t:"احفظيها يا أميرة: من، إلى، عن، على، في، الباء، الكاف، اللام"}
+];
+let i=0,j=0,crown=0;
+function start(){i=0; show();}
+function show(){
+if(i>=all.length){document.getElementById("game").innerHTML=`<h2>برافو يا أميرات الثالث ب! 👑🎉🏰</h2><p>جمعتن ${j} جوهرة و ${crown} تاج</p><p>🏰 فتحتن قصر الأميرة الوردي!</p><p style="color:#C2185B;font-weight:bold">ممتازات يا حلوات - أ/ سلسبيل فخورة بكن 💖</p><button class="btn" onclick="location.reload()">🔁 العبي مرة ثانية</button>`;document.getElementById("fill").style.width="100%";return;}
+let q=all[i];
+document.getElementById("game").innerHTML=`<div class="q">${i+1}/${all.length} - ${q.q}</div>`+q.o.map((o,k)=>`<button class="opt" onclick="check(this,${k})">${o}</button>`).join('')+`<div id="hint" style="margin-top:12px;color:#AD1457;font-size:15px;min-height:24px"></div>`;
+document.getElementById("fill").style.width=(i/all.length*100)+"%";
+}
+function check(el,k){
+let q=all[i];
+if(k===q.c){el.classList.add("right"); j++; crown++; document.getElementById("j").innerText=j; document.getElementById("crown").innerText=crown; document.getElementById("hint").innerHTML="✅ أحسنتِ يا أميرة! "+q.t+" 💎+1 👑+1"; setTimeout(()=>{i++; show()},1500);}
+else{el.classList.add("wrong"); document.getElementById("hint").innerHTML="❌ حاولي يا أميرة الثالث ب: "+q.t;}
+}
 </script>
 </body>
 </html>
