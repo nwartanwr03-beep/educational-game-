@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لعبة الابتدائي</title>
+<style>
+body{font-family:tahoma;background:#FFF8E1;text-align:center;padding:20px}
+.card{background:white;max-width:380px;margin:20px auto;padding:20px;border-radius:20px;box-shadow:0 4px 10px #0002}
+button{padding:10px 20px;border:none;border-radius:10px;margin:5px;font-size:18px}
+.q{background:#FFECB3;width:100%;font-size:20px}
+#score{color:#E65100;font-weight:bold;font-size:22px}
+</style>
+</head>
+<body>
+<h1>🎓 لعبة الأبطال</h1>
+<div id="score">النقاط: 0</div>
+<div class="card">
+<h2 id="q"></h2>
+<div id="opts"></div>
+<p id="fb"></p>
+</div>
+<script>
+let s=0;
+function newQ(){
+let a=Math.floor(Math.random()*10)+1,b=Math.floor(Math.random()*10)+1;
+let op=['+','-','×'][Math.floor(Math.random()*3)],c;
+if(op==='+')c=a+b;
+if(op==='-'){if(b>a){let t=a;a=b;b=t}c=a-b}
+if(op==='×')c=a*b;
+document.getElementById('q').innerText=`${a} ${op} ${b} = ؟`;
+let o=[c];while(o.length<4){let x=c+Math.floor(Math.random()*10)-5;if(x>=0&&!o.includes(x))o.push(x)}
+o.sort(()=>Math.random()-0.5);
+document.getElementById('opts').innerHTML=o.map(v=>`<button class=q onclick="chk(${v},${c})">${v}</button>`).join('');
+}
+function chk(v,c){
+let f=document.getElementById('fb');
+if(v===c){s++;f.innerText='✅ ممتاز!';f.style.color='green';}
+else{f.innerText='❌ خطأ';f.style.color='red';}
+document.getElementById('score').innerText='النقاط: '+s;
+setTimeout(()=>{f.innerText='';newQ();},700);
+}
+newQ();
+</script>
+</body>
+</html>
